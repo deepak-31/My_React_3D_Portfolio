@@ -2,6 +2,7 @@ import EarthCanvas from "./Earth";
 import BallCanvas from "./Ball";
 import ComputersCanvas from "./Computers";
 import StarsCanvas from "./Stars";
-import Avtar from "./Avtar"
+import Avatar from "./Avatarold"
+import Experience from "./Experience";
 
-export { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas, Avtar };
+export { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas, Avatar, Experience };
