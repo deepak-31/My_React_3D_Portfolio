@@ -19,7 +19,7 @@ export function Avatar(props) {
     const { animations: wavingAnimation } = useFBX("animations/Waving.fbx");
 
     wavingAnimation[0].name = "Waving";
-    // console.log(wavingAnimation);
+    // // // console.log(wavingAnimation);
 
 
     const { actions } = useAnimations(
@@ -33,10 +33,10 @@ export function Avatar(props) {
 
     useFrame((state) => {
 
-        // group.current.getObjectByName("Head").lookAt(state.camera.position);
+        group.current.getObjectByName("Head").lookAt(state.camera.position);
+
         // const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-        // console.log(target);
-        // group.current.getObjectByName("Spine2").lookAt(target);
+        // group.current.getObjectByName("Head").lookAt(target);
 
 
         // if (headFollow) {

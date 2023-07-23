@@ -42,28 +42,49 @@ const Experience = () => {
             >
                 <Suspense fallback={<CanvasLoader />}>
                     <OrbitControls
+                        enableDamping={true}
+                        dampingFactor={0.05}
                         enableZoom={false}
+
+                        // 34
+                        // maxAzimuthAngle={Math.PI / 9 * (17 / 6)}
+                        // minAzimuthAngle={-Math.PI / 9 * (17 / 6)}
+
+                        // 35 
+                        maxAzimuthAngle={Math.PI / 9 * (7 / 4)}
+                        minAzimuthAngle={-Math.PI / 9 * (7 / 4)}
+
+                        //  40 
+                        // maxAzimuthAngle={Math.PI / 9 * 2}
+                        // minAzimuthAngle={-Math.PI / 9 * 2}
+
+                        // 30 
+                        // maxAzimuthAngle={Math.PI / 6}
+                        // minAzimuthAngle={-Math.PI / 6}
+
+                        // 45
+                        // maxAzimuthAngle={Math.PI / 4}
+                        // minAzimuthAngle={-Math.PI / 4}
+
                         maxPolarAngle={Math.PI / 2}
                         minPolarAngle={Math.PI / 2}
                     />
-                    <ContactShadows
-                        opacity={0.42}
-                        scale={10}
-                        blur={1}
-                        far={10}
-                        resolution={256}
-                        color="#000000"
-                    />
+
                     <Environment preset="sunset" />
                     <group
-                        // rotatex={-1.5}
-                        // rotateY={-Math.PI / 2}
-                        // rotateZ={-Math.PI / 2}
                         position={isMobile ? [0, -0.5, 0] : [0, -0.5, 0]}
                         rotation={[-1.5, 0, 0]}
-                    // rotation={[0, 0.7, 0]}
+                    // rotation={[0, 0, 0]}
                     // position-y={-1}
                     >
+                        <ContactShadows
+                            opacity={0.42}
+                            scale={10}
+                            blur={1}
+                            far={10}
+                            resolution={256}
+                            color="#000000"
+                        />
                         <Avatar animation={"Standing"} />
                     </group>
                 </Suspense>

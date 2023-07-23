@@ -5,9 +5,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // primary: "#22A699",
         primary: "#050816",
+
+        // secondary: "#F2BE22",
         secondary: "#aaa6c3",
+
+
+        // tertiary: "#F2BE22",
         tertiary: "#151030",
+
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
@@ -21,6 +28,28 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }
+        }
+      },
+      animation: {
+        typing: "typing 2.5s steps(20) infinite alternate, blink .7s infinite"
+      }
     },
   },
   plugins: [],
